@@ -2,13 +2,17 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     margin: 0;
-    padding: 0;
+    padding: 20;
+  }
+  
+  #app{
+    margin: 40px;
   }
   
   .container {
     max-width: 800px;
     margin: 20px auto;
-    background-color: #fff;
+    background-color: black;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -38,15 +42,15 @@ body {
   }
   
   button {
-    background-color: #4CAF50;
-    color: white;
+    background-color: skyblue;
+    color: black;
     border: none;
     border-radius: 5px;
     cursor: pointer;
   }
   
   button:hover {
-    background-color: #45a049;
+    background-color: skyblue;
   }
   
   table {
@@ -65,12 +69,12 @@ body {
   }
   
   th {
-    background-color: #4CAF50;
-    color: white;
+    background-color: skyblue;
+    color: black;
   }
   
   td {
-    background-color: #f9f9f9;
+    background-color: black;
   }
   
   .delete-button {
