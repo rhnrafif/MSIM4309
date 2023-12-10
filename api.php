@@ -2,10 +2,10 @@
 header('Content-Type: application/json');
 
 // Koneksi ke database (sesuaikan dengan konfigurasi database Anda)
-$host = "localhost";
+$host = "http://localhost/phpmyadmin/index.php?route=/database/structure&db=toko_car";
 $user = "root";
 $pass = "";
-$dbname = "toko_mobil";
+$dbname = "toko_car";
 
 $koneksi = new mysqli($host, $user, $pass, $dbname);
 
