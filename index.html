@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toko Mobil V.1</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+
+<div id="app">
+  <h1>Tabel Kendaraan</h1>
+
+  <!-- Form Tambah Data -->
+  <form @submit.prevent="tambahData">
+    <label for="namaMobil">Nama Mobil:</label>
+    <input type="text" id="namaMobil" v-model="dataBaru.nama_mobil" required>
+
+    <label for="merk">Merk:</label>
+    <input type="text" id="merk" v-model="dataBaru.merk" required>
+
+    <label for="warna">Warna:</label>
+    <input type="text" id="warna" v-model="dataBaru.warna" required>
+
+    <label for="nopol">Nomor Polisi:</label>
+    <input type="text" id="nopol" v-model="dataBaru.nopol" required>
+
+    <label for="harga">Harga:</label>
+    <input type="number" id="harga" v-model="dataBaru.harga" required>
+
+    <button type="submit">Tambah Data</button>
+  </form>
+
+  <!-- Tabel Data Kendaraan -->
+  <table border="1">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Nama Mobil</th>
+        <th>Merk</th>
+        <th>Warna</th>
+        <th>Nomor Polisi</th>
+        <th>Harga</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="(kendaraan, index) in dataKendaraan" :key="kendaraan.id">
+        <td>{{ index + 1 }}</td>
+        <td>{{ kendaraan.nama_mobil }}</td>
+        <td>{{ kendaraan.merk }}</td>
+        <td>{{ kendaraan.warna }}</td>
+        <td>{{ kendaraan.nopol }}</td>
+        <td>{{ kendaraan.harga }}</td>
+        <td><button @click="hapusData(kendaraan.id)">Hapus</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
